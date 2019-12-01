@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Editar</title>
+
+  <style>
+  #tabela{
+    width: 1000px;
+  }
+  </style>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg bg-dark text-uppercase bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color:white">Achados e Perdidos</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      </div>
+    </div>
+  </nav>
+  <div>
+    
+    <form method="POST" th:object="${}">
+  <center><h1 class="mt-5">Edição</h1>
+  <p class="lead"></p><div class="form-group">
+    <label class="col-md-2 control-label" for="Nome">Objeto</label>  
+    <div class="col-md-2">
+    <input class="form-control input-md" required="" type="text" maxlength="11" th:field="*{}">
+    </div>
+    <label class="col-md-1 control-label" for="Nome">Descrição</label>  
+    <div class="col-md-2">
+    <textarea class="form-control input-md" required="" type="text" onBlur="showhide()" th:field="*{}"></textarea>  
+  </div>
+  </div>
+  <label class="col-md-1 control-label" for="Nome">Data</label>  
+  <div class="col-md-2">
+  <input class="form-control input-md" placeholder="" required="" type="date" maxlength="10" onBlur="showhide()" th:field="*{}"><br>
+  <button type="button" class="btn btn-success">Alterar</button>  
+  </div>
+</p></center>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- Bootstrap core JavaScript -->
+ <script src="vendor/jquery/jquery.slim.min.js"></script>
+ <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
